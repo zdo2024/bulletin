@@ -1,0 +1,14 @@
+name: On Push Workflow
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run a script
+        run: echo "File pushed, processing..."
+        # 在这里添加你的处理逻辑
